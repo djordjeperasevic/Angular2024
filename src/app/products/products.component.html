@@ -1,0 +1,34 @@
+<div *ngIf="showDetails">
+    <app-products-details [productId]="productId" (onClose)="onProductConfirm($event)"></app-products-details>
+</div>
+        <button (click)="showProductDetails(0)">Add</button>
+
+        <input type="text" name="Filter" id="" [(ngModel)]="filter">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>code</th>
+                <th>name</th>
+                <th>descritption</th>
+                <th>image</th>
+                <th>price</th>
+                <th>dateCreated</th>
+                <th>id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr appHighlight *ngFor="let product of products">
+            <td>{{product.code}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.descriptiopricen}}</td>
+            <td><img src="{{product.image}}" width="50"></td>
+            <td>{{product.price}}</td>
+            <td>{{product.dateCreated | date:'longDate'}}</td>
+            <td>{{product.id}}</td>
+            <td>
+                <button (click)="deleteData(product.id)">Brisanje</button>
+                <button (click)="showProductDetails(product.id)">Izmeni</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

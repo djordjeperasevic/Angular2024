@@ -1,0 +1,18 @@
+<fieldset>
+    <label for="code">Code:</label>
+    <input type="string" id="code" [(ngModel)]="product.code"> <br><br>
+    <label for="name">Name:</label>
+    <input type="string" id="name" [(ngModel)]="product.name"><br><br>
+    <label for="descriptiopricen">Descritption:</label>
+    <input type="string" id="descriptiopricen" [(ngModel)]="product.descriptiopricen"><br><br>
+    <label for="image">Image:</label>
+    <input type="string" id="image" [(ngModel)]="product.image"><br><br>
+    <label for="price">Price:</label>
+    <input type="string" id="price" [(ngModel)]="product.price"><br><br>
+    <label for="dateCreated">DateCreated:</label>
+    <input type="string" id="dateCreated" [(ngModel)]="product.dateCreated"><br><br>
+    <!-- <label for="id">Id:</label>
+    <input type="string" id="id" [(ngModel)]="product.id"><br><br> -->
+    <button (click)="close()">Close</button>
+    <button (click)="confirm()">Save</button>
+</fieldset>
